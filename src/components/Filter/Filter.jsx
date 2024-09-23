@@ -1,23 +1,46 @@
 import PropTypes from 'prop-types';
-import { StyledLabel, StyledInput } from './Filter.styled';
+import { Label, Input } from './Filter.styled';
 
-function Filter({ value, onChange }) {
+export const Filter = ({ value, handleChangeFilter }) => {
   return (
-    <StyledLabel>
+    <Label>
       Find contacts by name
-      <StyledInput
-        name="filter"
+      <Input
         type="text"
+        name="filter"
+        placeholder="Enter contact name"
         value={value}
-        onChange={onChange}
+        onChange={handleChangeFilter}
       />
-    </StyledLabel>
+    </Label>
   );
-}
+};
 
 Filter.propTypes = {
   value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  handleChangeFilter: PropTypes.func.isRequired,
 };
 
-export default Filter;
+// import PropTypes from 'prop-types';
+// import { StyledLabel, StyledInput } from './Filter.styled';
+
+// function Filter({ value, onChange }) {
+//   return (
+//     <StyledLabel>
+//       Find contacts by name
+//       <StyledInput
+//         name="filter"
+//         type="text"
+//         value={value}
+//         onChange={onChange}
+//       />
+//     </StyledLabel>
+//   );
+// }
+
+// Filter.propTypes = {
+//   value: PropTypes.string.isRequired,
+//   onChange: PropTypes.func.isRequired,
+// };
+
+// export default Filter;
