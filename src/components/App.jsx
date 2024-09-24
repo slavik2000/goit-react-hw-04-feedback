@@ -22,7 +22,7 @@ export const App = () => {
     //  ]
 
            () => {
-         return loadLocalStorage(LS_CONTACTS_KEY) ?? [];
+       return loadLocalStorage(LS_CONTACTS_KEY) ?? [];
        }
    );
   const [filter, setFilter] = useState('');
